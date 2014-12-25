@@ -20,7 +20,7 @@
 .navigation_bar ul li a p{font-size: 12px;line-height: 12px;}
 
 /* index */
-.index_bg{width:100%;position:absolute;top:0;left:0;background-image: url('{{site.baseurl}}/resource/image/index_bg.jpg');background-repeat: no-repeat;background-size: cover;}
+.index_bg{width:100%;position:absolute;top:0;left:0;background-image: url('mobile-gallary-demo/resource/image/index_bg.jpg');background-repeat: no-repeat;background-size: cover;}
 .index{position: absolute;width: 100%;top: 35%;text-align: center;}
 .index h1{color: #fff;font-size: 35px;}
 .index_btn{padding: 20px;overflow: hidden;position: absolute;width: 100%;bottom:0;}

@@ -1,0 +1,17 @@
+---
+layout: template
+---
+<header class="top_bar">
+	<ul>
+		<li class="back_btn"><i class="fa fa-angle-left"></i></li>
+		<li class="menu_head"><span>{{ page.title }}</span></li>
+		<li class="right_btn"></li>
+	</ul>
+</header>
+{{ content }}
+<script>
+	$('.top_bar').click(function(){
+		event.preventDefault();
+		history.back(1);
+	})
+</script>

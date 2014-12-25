@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="formate-detection" content="telephone=yes">
+	<meta name=description content="photograph circle">
+	<meta name=keywords content="demo photograph">
+	<meta name=author content="caesor">
+	<title>Document</title>
+	<link rel="stylesheet" href="{{site.baseurl}}/resource/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{site.baseurl}}/resource/font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{site.baseurl}}/css/common.css">
+	<link rel="stylesheet" href="{{site.baseurl}}/css/pages.css">
+	<link rel="stylesheet" href="{{site.baseurl}}/css/msg.css">
+</head>
+<body>
+	<script src="{{site.baseurl}}/resource/jquery-2.1.3.min.js"></script>
+	<script src="{{site.baseurl}}/resource/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{site.baseurl}}/resource/layer.m/layer.m.js"></script>
+	<srcipt src="{{site.baseurl}}/js/common.js"></srcipt>
+	<script>
+		if( $('body').height() < $(window).height()){
+			$('body').height($(window).height())
+		}
+	</script>
+	{{ content }}
+</body>
+</html>

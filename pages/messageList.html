@@ -1,0 +1,47 @@
+---
+layout: frame
+title: 消息列表
+---
+<header class="top_bar">
+	<ul>
+		<li class="back_btn"></li>
+		<li class="menu_head"><span>{{ page.title }}</span></li>
+		<li class="right_btn"></li>
+	</ul>
+</header>
+<div class="person_list">
+	<ul>
+		<li>
+			<div class="manPic"><img src="{{site.baseurl}}/resource/image/weixinhead1.jpeg"></div>
+			<span>Lily</span><span class="msg_time">11:32</span>
+			<div class="breif_msg">星期六可以吗？</div>
+		</li>
+		<li>
+			<div class="manPic"><img src="{{site.baseurl}}/resource/image/weixinhead2.jpeg"></div>
+			<span>Peter</span><span class="msg_time">11:10</span>
+			<div class="breif_msg">Hello~</div>
+		</li>
+		<li>
+			<div class="manPic"><img src="{{site.baseurl}}/resource/image/weixinhead3.jpeg"></div>
+			<span>Simon</span><span class="msg_time">10:32</span>
+			<div class="breif_msg">昨天睡过头来，错过了体育馆的摄影展，真是可惜。。。</div>
+		</li>
+		<li>
+			<div class="manPic"><img src="{{site.baseurl}}/resource/image/weixinhead4.jpeg"></div>
+			<span>Kevin</span><span class="msg_time">09:30</span>
+			<div class="breif_msg">你起床了吗？</div>
+		</li>
+		<li>
+			<div class="manPic"><img src="{{site.baseurl}}/resource/image/weixinhead5.jpeg"></div>
+			<span>Mandy</span><span class="msg_time">09:12</span>
+			<div class="breif_msg">我给你发微信了，你一直不回我 T_T</div>
+		</li>
+	</ul>
+</div>
+<br>
+<br>
+<script>
+	$(".person_list ul li").click(function(){
+		location.href = "{{site.pageurl}}/message.html";
+	})
+</script>

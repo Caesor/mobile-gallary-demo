@@ -1,0 +1,4 @@
+baseurl:
+permalink: /:month-:day-:year/:title.html
+imageurl: /resource/image/homeimage
+pageurl: /pages

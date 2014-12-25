@@ -1,4 +1,4 @@
-baseurl:
+baseurl: /mobile-gallary-demo
 permalink: /:month-:day-:year/:title.html
-imageurl: /resource/image/homeimage
-pageurl: /pages
+imageurl: /mobile-gallary-demo/resource/image/homeimage
+pageurl: /mobile-gallary-demo/pages

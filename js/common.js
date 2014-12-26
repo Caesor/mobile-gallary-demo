@@ -13,3 +13,7 @@ var checkForm = {
 		return suc;
 	}
 }
+
+$(function(){
+	$(".black_bg").height($(window).height() - $(".top_bar").height())
+})

@@ -9,7 +9,7 @@ title: 我的
 		<li class="right_btn"></li>
 	</ul>
 </header>
-<div class="userCenter">
+<div class="bottom_margin userCenter">
 	<div class="userCenter_box">
 		<img src="{{site.baseurl}}/resource/image/personal_bg1.jpg" class="user_center_01"/>
 		<div class="userIntro">
@@ -19,17 +19,67 @@ title: 我的
 		<div class="box1 approve_man">
 			<h3 class="title">个人信息</h3>
 			<ul class="ul_02">
-				<li>电话：</li>
+				<li>电话：13884513944</li>
 				<li>邮箱：michael_lzk@163.com</li>
 			</ul>
 		</div>
 		<div class="box1 approve_man">
-			<h3 class="title"><i class="fa fa-picture-o"></i><span class="user_center_info">我的作品</span></h3>
+			<h3 class="title">
+				<i class="fa fa-picture-o"></i>
+				<span class="user_center_info">我的作品</span>
+				<i class="fa fa-angle-up toggle_down" statu="1"></i>
+			</h3>
+			<ul class="myPhotos">
+				<li class="a_photo"><img src="{{site.baseurl}}/resource/image/race.jpg" alt=""></li>
+				<li class="a_photo"><img src="{{site.baseurl}}/resource/image/race1.jpg" alt=""></li>
+				<li class="a_photo"><img src="{{site.baseurl}}/resource/image/race2.jpg" alt=""></li>
+				<li class="a_photo"><img src="{{site.baseurl}}/resource/image/sky.jpg" alt=""></li>
+				<li class="a_photo"><img src="{{site.baseurl}}/resource/image/sunset.jpg" alt=""></li>
+				<li class="a_photo"><img src="{{site.baseurl}}/resource/image/personal_bg.jpg" alt=""></li>
+			</ul>
 		</div>
-
 		<div class="box1 approve_man">
-			<h3 class="title"><i class="fa fa-cog"></i><span class="user_center_info">设置</span></h3>
+			<h3 class="title">
+				<i class="fa fa-calendar"></i>
+				<span class="user_center_info">我的活动</span>
+				<i class="fa fa-angle-down toggle_down" statu="0"></i>
+			</h3>
+			<ul class="ul_02 activity_list">
+				<li><a href="javascript:;" >影像时代杂志双月赛10-11月度主题： 色彩（给点颜色看看！）</a></li>
+				<li><a href="javascript:;" >我要上封面-ZAKER封面征集第16弹</a></li>
+				<li><a href="javascript:;" >发现•上海&北京 摄影征集大赛</a></li>
+				<li><a href="javascript:;" >年终盘点：分享2014你的摄影故事</a></li>
+			</ul>
 		</div>
-		<br/><br/>
+		<div class="box1 approve_man" id="setting_line">
+			<h3 class="title">
+				<i class="fa fa-cog"></i>
+				<span class="user_center_info">设置</span>
+			</h3>
+		</div>
 	</div>
 </div>
+<script>
+	$(".title").click(function(){
+		var _ob = $(this);
+		_ob.next("ul").toggle();
+		var icon = _ob.find(".toggle_down");
+		if(icon.attr("statu") == '0'){
+			icon.removeClass("fa-angle-down").addClass("fa-angle-up");
+			icon.attr("statu","1");
+		}else{
+			icon.removeClass("fa-angle-up").addClass("fa-angle-down");
+			icon.attr("statu","0");
+		}
+	})
+
+	$(".activity_list li").click(function(){
+		location.href = "{{site.pageurl}}/activity_detail.html" 
+		return false;
+	})
+
+	$("#setting_line").click(function(){
+		location.href = "{{site.pageurl}}/setting.html" 
+		return false;
+	})
+</script>

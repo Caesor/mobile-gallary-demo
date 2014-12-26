@@ -2,6 +2,7 @@
 .form-horizontal button{border-radius: 0px;width: 100%;}
 .form-horizontal a{border-radius: 0px;}
 .form-horizontal .form_warning{border-bottom:1px solid #f80;}
+.bottom_margin{padding-bottom: 60px;}
 
 /* top bar */
 .top_bar{font-size: 18px;color:#fff;background-color: #285e8e;}
@@ -64,7 +65,6 @@
 	15%{opacity:0.4;}
 	to{opacity:1;}
 }
-/* wrap */
 #wrap{width:auto;height:auto;margin:0 auto;position:relative;}
 #wrap .box{width:50%;height:auto;padding:10px 5px;border:none;float:left;}
 #wrap .box .info{width:100%;height:auto;box-shadow:0 0 10px #666;background:#fff;}
@@ -78,6 +78,13 @@
 }
 #wrap .box .info .pic img{width:100%;}
 #wrap .box .info .title{line-height:30px;text-align:center;color:#666;font-size:16px;font-weight:bold;overflow:hidden;}
+
+.black_bg{width: 100%;background-color: #000;opacity: 0.8;position: absolute;top: 45px;left: 0;}
+.search_line{position: absolute;top: 45px;z-index: 10;width: 100%;}
+.search_line input{border:none; border-bottom: 1px solid #fff;}
+.gallary{width: 100%;}
+.gallary_pic{width: 50%;overflow: hidden;}
+.gallary_pic img{width: 100%;}
 
 /* activity */
 .active_list{position: relative;padding: 8px 6px;border-bottom: 1px solid #eee;overflow: hidden;}
@@ -108,16 +115,23 @@
 .user_center_01{ width:100%;}
 .userIntro{ height:50px; background:url(../images/userCenter/pic_02.png) repeat-x; position:relative; margin-bottom:10px; border-bottom: 1px solid #eee;}
 .avatar{ width:75px; height:75px; position:absolute; left:30px; top:-28px; padding: 3px;background: #fff; box-shadow: 1px 1px 2px #ccc; }
-.userCenter{padding-bottom:0;background:#eee;  }
+.userCenter{background:#eee;  }
 .userIntro h2{line-height: 66px; font-size: 20px; text-indent: 121px; }
 .userCenter_box .approve_man{ margin-bottom:15px;}
 .userCenter_box .approve_man h3{ font-size:18px; font-weight:700;}
 .userCenter_box .approve_man .ul_01,.userCenter_box .approve_man .ul_02{padding-top:10px;}
 .userCenter_box .approve_man .ul_01 li{padding:10px 0; background:url(../images/userCenter/down.png) no-repeat right center; background-size:13px 13px;}
-.userCenter_box .approve_man .ul_02 li{padding:5px 0;}
+.userCenter_box .approve_man .ul_02 li{padding:5px 0;border-bottom: 1px solid #eee;}
+.userCenter_box .approve_man .ul_02 li:last-child{border:none;}
 .userCenter_box .approve_man .ul_01 li:first-child{border-bottom:1px solid #E4DEDE;}
 .userCenter_box .approve_man .ul_01 li a{ color:#d2002f}
 .userCenter_box .approve_man .ul_01 li a span{ color:#000}
 .box1{padding: 10px 20px;margin: 6px 0;background: #fff;}
 .userCenter_box i{color:;}
 .user_center_info{padding-left: 20px;}
+.title{position: relative;}
+.toggle_down{position: absolute;right: 10px;font-size: 24px;}
+.activity_list{display: none;}
+.myPhotos{width:100%;text-align: center;margin: 10px 0;margin-left: -5px;overflow: hidden;}
+.a_photo{float:left; width: 33%;overflow: hidden;}
+.a_photo img{width: 100%; margin: 5px;}

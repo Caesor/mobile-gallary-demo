@@ -6,7 +6,15 @@ title: 画廊
 	<ul>
 		<li class="back_btn"></li>
 		<li class="menu_head"><span>{{ page.title }}</span></li>
-		<li class="right_btn"><i class="fa fa-bars"></i></li>
+		<li class="right_btn" id="landscapeMenu">
+			<i class="fa fa-bars"></i>
+			<select name="" id="choose_landscape">
+				<option value="">全部</option>
+				<option value="">风景</option>
+				<option value="">人物</option>
+				<option value="">创意</option>
+			</select>
+		</li>
 	</ul>
 </header>
 <section class="home_content">
@@ -73,7 +81,21 @@ title: 画廊
 		</div>
 	</div>
 </section>
+<br>
+<br>
 <script type="text/javascript">
+$(function(){
+	$("#landscapeMenu").click(function(){
+		$("#choose_landscape").change(function(){
+
+		})
+	})
+	// $(".box").click(function(){
+	// 	location.href = "{{site.pageurl}}/gallary.html";
+	// 	return false;
+	// })
+})
+
 window.onload = function(){
 	//运行瀑布流主函数
 	PBL('wrap','box');

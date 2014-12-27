@@ -8,12 +8,6 @@ title: 画廊
 		<li class="menu_head"><span>{{ page.title }}</span></li>
 		<li class="right_btn" id="landscapeMenu">
 			<i class="fa fa-bars"></i>
-			<select name="" id="choose_landscape">
-				<option value="">全部</option>
-				<option value="">风景</option>
-				<option value="">人物</option>
-				<option value="">创意</option>
-			</select>
 		</li>
 	</ul>
 </header>
@@ -22,78 +16,112 @@ title: 画廊
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/1.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/2.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/3.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/4.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>	
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/5.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>		
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/6.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>		
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/7.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/8.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/9.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>
 		<div class="box">
 			<div class="info">
 				<div class="pic"><img src="{{site.imageurl}}/10.jpg"></div>
-				<div class="title"><a href="#">This is a title.</a></div>
+				<div class="title"><span class="pic_mark"><i class="fa fa-heart"></i> 2 <i class="fa fa-comment-o"></i> 8</span></div>
 			</div>
 		</div>
 	</div>
 </section>
 <br>
 <br>
+<section class="pic_review displayNone">
+	<section class="pic_review_des">每个人心里都有一个，保留着的空位，等一个人出现，拥抱着我的世界，站在爱的面前，所有寂寞防备，一瞬间崩溃。</section>
+</section>
+<!-- select option -->
+<section class="black_bg displayNone"></section>
+<section class="my_select_model">
+	<ul class="">
+		<li class=""><button class="btn btn-default">全部</button></li>
+		<li class=""><button class="btn btn-default">风景</button></li>
+		<li class=""><button class="btn btn-default">人物</button></li>
+		<li class=""><button class="btn btn-default">创意</button></li>
+	</ul>
+</section>
 <script type="text/javascript">
 $(function(){
+	//choose selection
 	$("#landscapeMenu").click(function(){
-		$("#choose_landscape").change(function(){
-
-		})
+		if($(".black_bg").hasClass("displayNone")){
+			$(".black_bg").removeClass("displayNone");
+		}else{
+			$(".black_bg").addClass("displayNone");
+		}
+		$(".my_select_model").animate({
+			height:'toggle'
+		});
 	})
-	// $(".box").click(function(){
-	// 	location.href = "{{site.pageurl}}/gallary.html";
-	// 	return false;
-	// })
+	//cancle selection
+	$(".black_bg").click(function(){
+		$("#landscapeMenu").click();
+	})
+
+	//show picture view
+	$(".box").click(function(){
+		var pic_review = $(".pic_review");
+		if( pic_review.hasClass('displayNone') ){
+			pic_review.removeClass('displayNone');
+		}else{
+			pic_review.addClass('displayNone');
+		}
+		return false;
+	})
+	//cancle picture view
+	$(".pic_review").click(function(){
+		$(".pic_review").addClass('displayNone');
+	})
 })
 
 window.onload = function(){

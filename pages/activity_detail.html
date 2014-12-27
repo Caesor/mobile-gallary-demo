@@ -21,6 +21,9 @@ title: 《影像时代》杂志双月赛
 	2、所有获奖作品将被刊登在《影像时代》杂志上，作者除奖品外还会获赠样刊。<br>
 	3、湖南地区获奖者可获入湖南省摄影家协会加2分。</p>
 	<br>
+	<section class="checkin">
+		<button type="" class="btn btn-success" id="checkIn" statu="0">我要报名</button>
+	</section>
 </section>
 	<div class="comment_box">
 	<h3 class="comment"><b>评论</b></h3>
@@ -39,3 +42,17 @@ title: 《影像时代》杂志双月赛
 	<input type="text" class="form-control" name="" value="" placeholder="说点什么吧...">
 	<button class="btn btn-primary">评论</button>
 </div>
+<script>
+	$("#checkIn").click(function(){
+		var ob = $("#checkIn");
+		if( ob.attr("statu") == "0" ){
+			ob.text("取消报名");
+			ob.statu = "1";
+			ob.removeClass("btn-success").addClass("btn-warning");
+		}else{
+			ob.text("我要报名");
+			ob.statu = "0";
+			ob.removeClass("btn-warning").addClass("btn-success");
+		}
+	})
+</script>

@@ -3,12 +3,30 @@ layout: template
 title: index
 ---
 <section class="index_bg"></section>
-<section class="index">
-	<h1>摄影圈</h1>
-</section>
+<h1 class="index_title">摄影圈</h1>
+<section class="black_bg1" style="opacity:0.3"></section>
+<div id='mySwipe' class='swipe'>
+  	<div class='swipe-wrap'>
+	    <div><b>分享、联通摄影世界</b></div>
+	    <div><b>垂直交流空间</b></div>
+	    <div><b>沟通、社交平台</b></div>
+	    <div><b>一站式解决方案</b></div>
+	</div>
+</div>
 <section class="index_btn">
-<a class="btn btn-default" id="start_travel" href="{{site.pageurl}}/login.html">开始旅程</a>
+	<a class="btn btn-default" id="start_travel" href="{{site.pageurl}}/login.html">开始旅程</a>
 </section>
 <script>
 	$('.index_bg').height($(window).height())
+
+	var elem = document.getElementById('mySwipe');
+	window.mySwipe = Swipe(elem, {
+	  startSlide: 4,
+	  auto: 3000,
+	  continuous: true,
+	  disableScroll: true,
+	  stopPropagation: true,
+	  callback: function(index, element) {},
+	  transitionEnd: function(index, element) {}
+	});
 </script>

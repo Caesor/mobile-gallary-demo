@@ -15,5 +15,14 @@ var checkForm = {
 }
 
 $(function(){
-	$(".black_bg").height($(window).height() - $(".top_bar").height())
+	if($(".userCenter").height() < $(window).height()){
+		$(".userCenter").height($(window).height() - $(".top_bar").height());
+	}
+	$(".black_bg").height($(window).height() - $(".top_bar").height());
+
+	//topbar controller back btn
+	$('.back_btn').click(function(){
+		event.preventDefault();
+		history.back(1);
+	})
 })

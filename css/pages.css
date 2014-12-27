@@ -1,17 +1,57 @@
 .form-horizontal input{border:none;border-bottom: 1px solid #eee; border-radius: 0px; box-shadow: none;}
 .form-horizontal button{border-radius: 0px;width: 100%;}
+.form-horizontal textarea{border:none; border-radius: 0px;}
 .form-horizontal a{border-radius: 0px;}
 .form-horizontal .form_warning{border-bottom:1px solid #f80;}
 .bottom_margin{padding-bottom: 60px;}
 
+.displayNone{display: none;}
+.black_bg{width: 100%;background-color: #000;opacity: 0.8;position: absolute;top: 45px;left: 0;}
+.black_bg1{width: 100%;height:100%;background-color: #000;opacity: 0.8;position: absolute;top: 0;left: 0;}
+
+.my_select_model{position: absolute;bottom: 0px;width: 100%;background-color: #E8E8E8;padding:10px;z-index: 1000;display: none;}
+.my_select_model ul{border-radius: 0px;}
+.my_select_model ul li{list-style-type: none;height: 40px;line-height: 40px;text-align: center;margin: 5px;}
+.my_select_model ul li button{width: 100%;border:none; border-radius: 0px;}
+
+/* index */
+.index_title{width: 100%;font-size: 35px;position: absolute;top: 50px;color: #fff;text-align: center;z-index: 1000;}
+.index_bg{width:100%;position:absolute;top:0;left:0;background-image: url('/mobile-gallary-demo/resource/image/index_bg1.jpg');background-repeat: no-repeat;background-size: cover;}
+.index_bg h1{text-align: center;color: #fff;padding:50px 0; }
+.index_btn{padding: 20px;overflow: hidden;position: absolute;width: 100%;bottom:0;}
+#start_travel{width: 100%;margin: 0 auto;line-height: 30px;font-size: 18px;border: none;border-radius: 0px;}
+
+.swipe {overflow: hidden;visibility: hidden;position: relative;top: 25%;max-width:500px;margin:0 auto;z-index: 100;}
+.swipe-wrap {overflow: hidden;position: relative;}
+.swipe-wrap > div {float:left;width:100%;position: relative;}
+#console {
+  font-size: 12px;
+  font-family:"Inconsolata", "Monaco", "Consolas", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  color: #999;
+  line-height: 18px;
+  margin-top: 20px;
+  max-height: 150px;
+  overflow: auto;
+}
+
+#mySwipe div b {
+  display:block;
+  font-weight:100;
+  color:#fff;
+  font-size:20px;
+  text-align:center;
+  margin:10px;
+  padding:100px 10px;
+}
+
 /* top bar */
 .top_bar{font-size: 18px;color:#fff;background-color: #285e8e;}
-.top_bar i{font-size: 28px;line-height: 45px;}
+.top_bar i{font-size: 24px;line-height: 45px;}
 .top_bar ul{list-style: none;width: 100%;height: 45px;}
 .top_bar ul li{display: block;float: left;height: 45px;}
-.top_bar .back_btn{width: 17%;text-align: center;}
+.top_bar .back_btn{width: 17%;text-align: center;line-height: 45px;font-size: 16px;}
 .top_bar .menu_head{width: 66%;text-align: center;line-height: 45px;}
-.top_bar .right_btn{width: 17%;text-align: center;}
+.top_bar .right_btn{width: 17%;text-align: center;line-height: 45px;font-size: 16px;}
 
 /* frame */
 .navigation_bar{width: 100%;position: fixed;left: 0;bottom: 0;z-index: 100;border-top: 1px solid #ccc;background-color: #fff;}
@@ -20,25 +60,18 @@
 .navigation_bar ul li a i{font-size: 24px;}
 .navigation_bar ul li a p{font-size: 12px;line-height: 12px;}
 
-/* index */
-.index_bg{width:100%;position:absolute;top:0;left:0;background-image: url('/mobile-gallary-demo/resource/image/index_bg.jpg');background-repeat: no-repeat;background-size: cover;}
-.index{position: absolute;width: 100%;top: 35%;text-align: center;}
-.index h1{color: #fff;font-size: 35px;}
-.index_btn{padding: 20px;overflow: hidden;position: absolute;width: 100%;bottom:0;}
-#start_travel{width: 100%;line-height: 30px;font-size: 18px;border: none;border-radius: 0px;}
-
 /* login */
-.user_head_img{width: 100px;margin: 50px auto;}
+.user_head_img{width: 100px;margin: 50px auto 30px;}
 .user_head_img img{width: 100%;}
-.login_form{width: 80%;margin: 0 auto;}
+.login_form{width: 80%;margin: 30px auto 0px;}
 .login_form button{width: 45%;margin: 2%;}
 .login_form a{width: 45%;margin: 2%;}
 
 /* register */
-.sign_form{width: 80%;margin: 0 auto;}
+.sign_form{width: 80%;margin: 20px auto 0px;}
 
 /* home */
-.home_content{}
+.home_content{position: relative;}
 /* 定义关键帧 */
 @-webkit-keyframes shade{
 	from{opacity:1;}
@@ -77,9 +110,15 @@
 	animation:shade 3s ease-in-out 1;
 }
 #wrap .box .info .pic img{width:100%;}
-#wrap .box .info .title{line-height:30px;text-align:center;color:#666;font-size:16px;font-weight:bold;overflow:hidden;}
+#wrap .box .info .title{line-height:30px;text-align:right;color:#666;font-size:14px;font-weight:bold;overflow:hidden;}
+#wrap .box .info .title .pic_mark{margin-right: 10px;}
+#wrap .box .info .title .pic_mark .fa-heart{color:rgb(203, 0, 0);}
 
-.black_bg{width: 100%;background-color: #000;opacity: 0.8;position: absolute;top: 45px;left: 0;}
+/* full screen pictrue view */
+.pic_review{position: fixed;top: 0px;left: 0;width: 100%;height: 100%;background-image:url('/mobile-gallary-demo/resource/image/homeimage/4.jpg');background-size:contain;z-index: 1000;background-color: #000;background-repeat: no-repeat;background-position:center; }
+.pic_review img{width: 100%;}
+.pic_review .pic_review_des{color: #aaa;position: absolute;bottom: 20px;padding: 0 10px;height: 50px;overflow: hidden;text-overflow: ellipsis;}
+
 .search_line{position: absolute;top: 45px;z-index: 10;width: 100%;}
 .search_line input{border:none; border-bottom: 1px solid #fff;}
 .gallary{width: 100%;}
@@ -96,6 +135,7 @@
 .acPeoNum {font-size: 12px;color: #616161;}
 .pubTime {font-size: 12px;color: #c5c5c5;position: absolute;bottom: 5px;right: 8px;}
 .active_list .status {position: absolute;right: 8px;top: 5px;color: #D1002F;}
+#pub{color:#449d44;}
 
 /* activity detail */
 .activity_detail{padding:20px; }
@@ -110,15 +150,20 @@
 .comment_footer{height:auto; overflow:hidden; -webkit-box-shadow: 0 0 0; background: #eee; padding: 5px;}
 .comment_footer input[type="text"]{width:78%; display:inline-block;}
 .common1 input[type="text"]{width: 66%;}
+.checkin{text-align: center;}
+#checkIn{width: 100%;border:none;border-radius: 0px;}
+
+/* pub actibity */
+.add_pic{border: 1px dashed #ccc;width: 70px;height: 70px;font-size: 50px;text-align: center;line-height: 60px;font-weight: 100;color:#ccc;}
 
 /* personal */
 .user_center_01{ width:100%;}
 .userIntro{ height:50px; background:url(../images/userCenter/pic_02.png) repeat-x; position:relative; margin-bottom:10px; border-bottom: 1px solid #eee;}
 .avatar{ width:75px; height:75px; position:absolute; left:30px; top:-28px; padding: 3px;background: #fff; box-shadow: 1px 1px 2px #ccc; }
-.userCenter{background:#eee;  }
+.userCenter{background:#eee;}
 .userIntro h2{line-height: 66px; font-size: 20px; text-indent: 121px; }
 .userCenter_box .approve_man{ margin-bottom:15px;}
-.userCenter_box .approve_man h3{ font-size:18px; font-weight:700;}
+.userCenter_box .approve_man h3{ font-size:16px;}
 .userCenter_box .approve_man .ul_01,.userCenter_box .approve_man .ul_02{padding-top:10px;}
 .userCenter_box .approve_man .ul_01 li{padding:10px 0; background:url(../images/userCenter/down.png) no-repeat right center; background-size:13px 13px;}
 .userCenter_box .approve_man .ul_02 li{padding:5px 0;border-bottom: 1px solid #eee;}
@@ -127,11 +172,15 @@
 .userCenter_box .approve_man .ul_01 li a{ color:#d2002f}
 .userCenter_box .approve_man .ul_01 li a span{ color:#000}
 .box1{padding: 10px 20px;margin: 6px 0;background: #fff;}
-.userCenter_box i{color:;}
+.userCenter_box .fa-sign-out{position: absolute;right: 10px;}
 .user_center_info{padding-left: 20px;}
 .title{position: relative;}
 .toggle_down{position: absolute;right: 10px;font-size: 24px;}
+.go_in{position: absolute;right: 5px;font-size: 24px;}
 .activity_list{display: none;}
 .myPhotos{width:100%;text-align: center;margin: 10px 0;margin-left: -5px;overflow: hidden;}
 .a_photo{float:left; width: 33%;overflow: hidden;}
 .a_photo img{width: 100%; margin: 5px;}
+
+/* person list */
+.contact_person{font-size: 16px;color:#838383;}

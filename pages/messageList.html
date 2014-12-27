@@ -6,7 +6,7 @@ title: 消息列表
 	<ul>
 		<li class="back_btn"></li>
 		<li class="menu_head"><span>{{ page.title }}</span></li>
-		<li class="right_btn"></li>
+		<li class="right_btn" id="person_list"><i class="fa fa-list-ul"></i></li>
 	</ul>
 </header>
 <div class="bottom_margin person_list">
@@ -43,5 +43,9 @@ title: 消息列表
 <script>
 	$(".person_list ul li").click(function(){
 		location.href = "{{site.pageurl}}/message.html";
+	})
+
+	$("#person_list").click(function(){
+		location.href = "{{site.pageurl}}/personList.html";	
 	})
 </script>

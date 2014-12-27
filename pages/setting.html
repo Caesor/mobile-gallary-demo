@@ -2,4 +2,33 @@
 layout: topbar
 title: 设置
 ---
-我的设置
+<div class="userCenter">
+	<div class="userCenter_box">
+		<div class="box1 approve_man">
+			<h3 class="title">消息提醒</h3>
+		</div>
+		<div class="box1 approve_man">
+			<h3 class="title">
+				聊天
+			</h3>
+		</div>
+		<div class="box1 approve_man">
+			<h3 class="title">
+				关于摄影圈
+			</h3>
+		</div>
+		<div class="box1 approve_man" id="quit_line">
+			<h3 class="title">
+				
+				退出登录
+				<i class="fa fa-sign-out"></i>
+			</h3>
+		</div>
+	</div>
+</div>
+<script>
+	$("#quit_line").click(function(){
+		location.href = "{{site.pageurl}}/login.html";
+		return false;
+	})
+</script>

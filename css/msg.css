@@ -22,8 +22,8 @@
 .msg_content img{height: 100px;}
 /* own speach */
 .me_ittle_head{float: right;}
-.arrow4 {position: absolute;font-size: 35px;color:#DDDDDD;top:15px;right:58px;}
-.arrow3 {font-size: 35px;position: absolute;color:#fff;top:15px;right: 59px;}
+.arrow4 {position: absolute;font-size: 35px;color:#DDDDDD;top:15px;right:57px;}
+.arrow3 {font-size: 35px;position: absolute;color:#fff;top:15px;right: 58px;}
 .me_msg_content{float: right;margin-right: 10px;background-color: #fff;border: 1px solid #DDDDDD;}
 
 .msg_box_right{width:28%;float:right;background-color: #fff;}

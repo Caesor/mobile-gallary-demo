@@ -6,7 +6,7 @@ title: 活动
 	<ul>
 		<li class="back_btn"></li>
 		<li class="menu_head"><span>{{ page.title }}</span></li>
-		<li class="right_btn"><i class="fa fa-plus"></i></li>
+		<li class="right_btn" id="add_acitvity"><i class="fa fa-camera-retro"></i></li>
 	</ul>
 </header>
 <section class="bottom_margin">
@@ -94,6 +94,11 @@ title: 活动
 <script>
 	$(".activity_ob").click(function(){
 		location.href = "{{site.pageurl}}/activity_detail.html" 
+		return false;
+	})
+
+	$("#add_acitvity").click(function(){
+		location.href = "{{site.pageurl}}/pub_activity.html" 
 		return false;
 	})
 </script>

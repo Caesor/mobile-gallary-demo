@@ -6,7 +6,7 @@
 .bottom_margin{padding-bottom: 60px;}
 
 .displayNone{display: none;}
-.black_bg{width: 100%;background-color: #000;opacity: 0.8;position: absolute;top: 45px;left: 0;}
+.black_bg{width: 100%;background-color: #000;opacity: 0.7;position: absolute;top: 45px;left: 0;}
 .black_bg1{width: 100%;height:100%;background-color: #000;opacity: 0.8;position: absolute;top: 0;left: 0;}
 
 .my_select_model{position: absolute;bottom: 0px;width: 100%;background-color: #E8E8E8;padding:10px;z-index: 1000;display: none;}
@@ -112,13 +112,14 @@
 #wrap .box .info .pic img{width:100%;}
 #wrap .box .info .title{line-height:30px;text-align:right;color:#666;font-size:14px;font-weight:bold;overflow:hidden;}
 #wrap .box .info .title .pic_mark{margin-right: 10px;}
+#wrap .box .info .title .pic_mark i{margin-left: 5px;}
 #wrap .box .info .title .pic_mark .fa-heart{color:rgb(203, 0, 0);}
 
 /* full screen pictrue view */
 .pic_review{position: fixed;top: 0px;left: 0;width: 100%;height: 100%;background-image:url('/mobile-gallary-demo/resource/image/homeimage/4.jpg');background-size:contain;z-index: 1000;background-color: #000;background-repeat: no-repeat;background-position:center; }
 .pic_review img{width: 100%;}
 .pic_review .pic_review_des{color: #fff;position: absolute;bottom: 20px;padding: 0 10px;height: 50px;overflow: hidden;text-overflow: ellipsis;background-color: #000;
-opacity: 0.8;}
+opacity: 0.6;}
 
 .search_line{position: absolute;top: 45px;z-index: 10;width: 100%;}
 .search_line input{border:none; border-bottom: 1px solid #fff;}
@@ -136,7 +137,7 @@ opacity: 0.8;}
 .acPeoNum {font-size: 12px;color: #616161;}
 .pubTime {font-size: 12px;color: #c5c5c5;position: absolute;bottom: 5px;right: 8px;}
 .active_list .status {position: absolute;right: 8px;top: 5px;color: #D1002F;}
-#pub{color:#449d44;}
+#pub{color:#4DB04D;}
 
 /* activity detail */
 .activity_detail{padding:20px; }
@@ -155,7 +156,7 @@ opacity: 0.8;}
 #checkIn{width: 100%;border:none;border-radius: 0px;}
 
 /* pub actibity */
-.add_pic{border: 1px dashed #ccc;width: 70px;height: 70px;font-size: 50px;text-align: center;line-height: 60px;font-weight: 100;color:#ccc;}
+.add_pic{border: 1px dashed #ccc;width: 70px;height: 70px;font-size: 55px;text-align: center;line-height: 70px;font-weight: 100;color:#ccc;}
 
 /* personal */
 .user_center_01{ width:100%;}
@@ -182,6 +183,7 @@ opacity: 0.8;}
 .myPhotos{width:100%;text-align: center;margin: 10px 0;margin-left: -5px;overflow: hidden;}
 .a_photo{float:left; width: 33%;overflow: hidden;}
 .a_photo img{width: 100%; margin: 5px;}
+.my_pic_review{background-image:url('/mobile-gallary-demo/resource/image/race1.jpg');}
 
 /* person list */
 .contact_person{font-size: 16px;color:#838383;}

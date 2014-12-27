@@ -59,6 +59,9 @@ title: 我
 		</div>
 	</div>
 </div>
+<section class="pic_review displayNone my_pic_review">
+	<section class="pic_review_des">每个人心里都有一个，保留着的空位，等一个人出现，拥抱着我的世界，站在爱的面前，所有寂寞防备，一瞬间崩溃。</section>
+</section>
 <script>
 	$(".title").click(function(){
 		var _ob = $(this);
@@ -81,5 +84,20 @@ title: 我
 	$("#setting_line").click(function(){
 		location.href = "{{site.pageurl}}/setting.html" 
 		return false;
+	})
+
+	//show picture view
+	$(".myPhotos li").click(function(){
+		var pic_review = $(".pic_review");
+		if( pic_review.hasClass('displayNone') ){
+			pic_review.removeClass('displayNone');
+		}else{
+			pic_review.addClass('displayNone');
+		}
+		return false;
+	})
+	//cancle picture view
+	$(".pic_review").click(function(){
+		$(".pic_review").addClass('displayNone');
 	})
 </script>

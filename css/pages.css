@@ -15,7 +15,7 @@
 .my_select_model ul li button{width: 100%;border:none; border-radius: 0px;}
 
 #slider_position{position: absolute; width: 100%;text-align: center;margin: auto; bottom: 5px;}
-#slider_position li{width: 10px;height: 10px;border-radius: 5px;background-color: #fff;display: inline-block;margin: 5px;opacity: 0.4;}
+#slider_position li{width: 8px;height: 8px;border-radius: 4px;background-color: #fff;display: inline-block;margin: 2px;opacity: 0.4;}
 #slider_position li.on{opacity: 1;}
 
 /* index */
@@ -123,7 +123,7 @@
 /* full screen pictrue view */
 .pic_review{position: fixed;top: 0px;left: 0;width: 100%;height: 100%;background-image:url('/mobile-gallary-demo/resource/image/homeimage/4.jpg');background-size:contain;z-index: 1000;background-color: #000;background-repeat: no-repeat;background-position:center; }
 .pic_review img{width: 100%;}
-.pic_review .pic_review_des{color: #fff;position: absolute;bottom: 20px;padding: 0 10px;height: 50px;overflow: hidden;text-overflow: ellipsis;background-color: #000;
+.pic_review .pic_review_des{color: #fff;position: absolute;bottom: 0px;padding: 0 10px 20px;height: 70px;overflow: hidden;text-overflow: ellipsis;background-color: #000;
 opacity: 0.6;}
 
 .search_line{position: absolute;top: 45px;z-index: 10;width: 100%;}

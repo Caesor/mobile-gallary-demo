@@ -4,9 +4,18 @@ layout: template
 {{ content }}
 <footer class="navigation_bar">
 	<ul>
-	    <li><a href="{{site.pageurl}}/home.html"><i class="fa fa-home"></i><p>首页</p></a></li>
+	    <li><a href="{{site.pageurl}}/home.html"><i class="fa fa-home"></i><p>画廊</p></a></li>
 	    <li><a href="{{site.pageurl}}/activity.html"><i class="fa fa-calendar"></i><p>活动</p></a></li>
 	    <li><a href="{{site.pageurl}}/messageList.html"><i class="fa fa-comment-o"></i><p>消息</p></a></li>
-	    <li><a href="{{site.pageurl}}/personal.html"><i class="fa fa-user"></i><p>我的</p></a></li>
+	    <li><a href="{{site.pageurl}}/personal.html"><i class="fa fa-user"></i><p>我</p></a></li>
 	</ul>
 </footer>
+<script>
+	$(".navigation_bar ul li a").removeClass("selected");
+	$(".navigation_bar ul li a").each(function(){
+		//alert($(this).text())
+		if($(this).text() == $(".menu_head").text()){
+			$(this).addClass("selected");
+		}
+	})
+</script>

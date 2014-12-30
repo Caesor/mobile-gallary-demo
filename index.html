@@ -1,6 +1,6 @@
 ---
 layout: template
-title: index
+title: 摄影圈
 ---
 <section class="index_bg"></section>
 <h1 class="index_title">摄影圈</h1>
@@ -12,6 +12,12 @@ title: index
 	    <div><b>沟通、社交平台</b></div>
 	    <div><b>一站式解决方案</b></div>
 	</div>
+	<ul id="slider_position">
+		<li class="on"></li>
+		<li class=""></li>
+		<li class=""></li>
+		<li class=""></li>
+	</ul>
 </div>
 <section class="index_btn">
 	<a class="btn btn-default" id="start_travel" href="{{site.pageurl}}/login.html">开始旅程</a>
@@ -19,14 +25,21 @@ title: index
 <script>
 	$('.index_bg').height($(window).height())
 
+	var bullets = $("#slider_position li");
+
 	var elem = document.getElementById('mySwipe');
 	window.mySwipe = Swipe(elem, {
-	  startSlide: 4,
+//	  startSlide: 4,
 	  auto: 3000,
 	  continuous: true,
-	  disableScroll: true,
-	  stopPropagation: true,
-	  callback: function(index, element) {},
-	  transitionEnd: function(index, element) {}
+//	  disableScroll: true,
+//	  stopPropagation: true,
+	  callback: function(pos) {
+	  	var i = bullets.length;
+	  	while(i--){
+	  		bullets[i].className = ' ';
+	  	}
+	  	bullets[pos].className = 'on';
+	  }
 	});
 </script>

@@ -88,7 +88,10 @@ title: 我
 
 	//show picture view
 	$(".myPhotos li").click(function(){
+		var bg_image = $(this).find("img").attr("src");
+		
 		var pic_review = $(".pic_review");
+		pic_review.css("background-image","url('"+bg_image+"')");
 		if( pic_review.hasClass('displayNone') ){
 			pic_review.removeClass('displayNone');
 		}else{

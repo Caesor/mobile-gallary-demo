@@ -49,15 +49,15 @@ title: 登陆账号
 		$("#login").click(function(){
 			var suc = checkForm.check_warn($("#login_form"));
 			if(suc){
-				if($("#my_account").val() == "nemo" || $("my_password").val() == "123" ){
-					location.href = "{{site.pageurl}}/home.html";
-				}else{
-					layer.open({
-					    content: '账号或密码无效',
-					    style: 'background-color:#000; opacity:0.8; color:#fff; border:none; text-align:center;',
-					    time: 2
-					});
-				}
+				// if($("#my_account").val() == "nemo" || $("my_password").val() == "123" ){
+				 	location.href = "{{site.pageurl}}/home.html";
+				// }else{
+				// 	layer.open({
+				// 	    content: '账号或密码无效',
+				// 	    style: 'background-color:#000; opacity:0.8; color:#fff; border:none; text-align:center;',
+				// 	    time: 2
+				// 	});
+				// }
 				
 			}
 			return false;	

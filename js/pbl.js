@@ -54,7 +54,7 @@ function PBL(wrap,box){
 	var boxs  = getClass(wrap,box);
 	//	2.获得屏幕可显示的列数
 	var boxW = boxs[0].offsetWidth;
-	var colsNum = Math.floor(document.getElementById('mobile_box').clientWidth/boxW);
+	var colsNum = document.getElementById('mobile_box').clientWidth/boxW;
 	wrap.style.width = boxW * colsNum+'px';//为外层赋值宽度
 	//	3.循环出所有的box并按照瀑布流排列
 	var everyH = [];//定义一个数组存储每一列的高度

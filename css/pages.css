@@ -1,3 +1,7 @@
+html,body{background: #DFDEDE;}
+.mobile_strict{max-width: 400px;margin: 0 auto;}
+.mobile_box{max-width: 400px;margin: 0 auto;background: #fff;position: relative;}
+
 .form-horizontal input{border:none;border-bottom: 1px solid #eee; border-radius: 0px; box-shadow: none;}
 .form-horizontal button{border-radius: 0px;width: 100%;}
 .form-horizontal textarea{border:none; border-radius: 0px;}
@@ -58,7 +62,7 @@
 .top_bar .right_btn{width: 17%;text-align: center;line-height: 45px;font-size: 16px;}
 
 /* frame */
-.navigation_bar{width: 100%;position: fixed;left: 0;bottom: 0;z-index: 100;border-top: 1px solid #ccc;background-color: #fff;}
+.navigation_bar{width: 100%;max-width: 400px;margin:0 auto;position: fixed;bottom: 0;z-index: 100;border-top: 1px solid #ccc;background-color: #fff;}
 .navigation_bar ul li a{color:#7b7b7b;width: 25%;float: left;text-align: center;padding: 5px 0;}
 .navigation_bar ul li a.selected{color:#285e8e;}
 .navigation_bar ul li a:hover{text-decoration: none;}
@@ -76,7 +80,7 @@
 .sign_form{width: 80%;margin: 20px auto 0px;}
 
 /* home */
-.home_content{position: relative;}
+.home_content{position: relative; width: 100%;}
 /* 定义关键帧 */
 @-webkit-keyframes shade{
 	from{opacity:1;}
@@ -121,7 +125,7 @@
 #wrap .box .info .title .pic_mark .fa-heart{color:rgb(203, 0, 0);}
 
 /* full screen pictrue view */
-.pic_review{position: fixed;top: 0px;left: 0;width: 100%;height: 100%;background-image:url('/mobile-gallary-demo/resource/image/homeimage/4.jpg');background-size:contain;z-index: 1000;background-color: #000;background-repeat: no-repeat;background-position:center; }
+.pic_review{position: fixed;top: 0px;width: 100%;height: 100%;background-image:url('/mobile-gallary-demo/resource/image/homeimage/4.jpg');background-size:contain;z-index: 1000;background-color: #000;background-repeat: no-repeat;background-position:center; }
 .pic_review img{width: 100%;}
 .pic_review .pic_review_des{color: #fff;position: absolute;bottom: 0px;padding: 0 10px 20px;height: 70px;overflow: hidden;text-overflow: ellipsis;background-color: #000;
 opacity: 0.6;}
